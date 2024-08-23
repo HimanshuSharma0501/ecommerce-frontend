@@ -49,20 +49,20 @@ const DiscountManagement = lazy(
 const NewDiscount = lazy(() => import("./pages/admin/management/newdiscount"));
 
 const App = () => {
-  // const { user, loading } = useSelector(
-  //   (state: RootState) => state.userReducer
-  // );
+  const { user, loading } = useSelector(
+    (state: RootState) => state.userReducer
+  );
 
   const dispatch = useDispatch();
   return signOut(auth).then((c) => console.log("done"));
-  // useEffect(() => {
-  //   onAuthStateChanged(auth, async (user) => {
-  //     if (user) {
-  //       const data = await getUser(user.uid);
-  //       dispatch(userExist(data.user));
-  //     } else dispatch(userNotExist());
-  //   });
-  // }, []);
+  useEffect(() => {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const data = await getUser(user.uid);
+        dispatch(userExist(data.user));
+      } else dispatch(userNotExist());
+    });
+  }, []);
 
   return loading ? (
     <Loader />
