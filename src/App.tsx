@@ -54,7 +54,7 @@ const App = () => {
   );
 
   const dispatch = useDispatch();
-  return signOut(auth).then((c) => console.log("done"));
+
   useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
       if (user) {

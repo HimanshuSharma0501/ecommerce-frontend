@@ -42,10 +42,10 @@ const Login = () => {
       });
 
       if ("data" in res) {
-        // const message = res.data?.message;
-        // message?.toString();
+        const send = res.data?.message as string;
+        toast.success(send);
 
-        // toast.success(message);
+        // toast.success(res.data.message);
 
         const data = await getUser(user.uid);
         dispatch(userExist(data?.user!));
