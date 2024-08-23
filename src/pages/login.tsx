@@ -42,7 +42,11 @@ const Login = () => {
       });
 
       if ("data" in res) {
-        toast.success("");
+        // const message = res.data?.message;
+        // message?.toString();
+
+        // toast.success(message);
+
         const data = await getUser(user.uid);
         dispatch(userExist(data?.user!));
       } else {
