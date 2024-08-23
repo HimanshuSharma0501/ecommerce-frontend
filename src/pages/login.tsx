@@ -42,7 +42,6 @@ const Login = () => {
       });
 
       if ("data" in res) {
-        toast.success(res.data.message);
         const data = await getUser(user.uid);
         dispatch(userExist(data?.user!));
       } else {

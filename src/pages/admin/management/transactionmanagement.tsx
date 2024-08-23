@@ -10,7 +10,7 @@ import {
 } from "../../../redux/api/orderAPI";
 import { RootState } from "../../../redux/store";
 import { Order, OrderItem } from "../../../types/types";
-import { responseToast, transformImage } from "../../../utils/features";
+import { responseToast } from "../../../utils/features";
 
 const defaultData: Order = {
   shippingInfo: {
