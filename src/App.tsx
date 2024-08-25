@@ -140,7 +140,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-      <Footer />
+
       <Toaster position="bottom-center" />
     </Router>
   );
