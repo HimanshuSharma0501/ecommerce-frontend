@@ -11,6 +11,7 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 import { RootState } from "./redux/store";
 
 import { onAuthStateChanged } from "firebase/auth";
+import ChatBotContainer from "./chat/ChatBotContainer";
 
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
@@ -22,6 +23,9 @@ const Orders = lazy(() => import("./pages/orders"));
 const OrderDetails = lazy(() => import("./pages/order-details"));
 const NotFound = lazy(() => import("./pages/not-found"));
 const Checkout = lazy(() => import("./pages/checkout"));
+// const ChatBot = lazy(() => import("./chat/ChatBot"));
+// const ChatBotButton = lazy(() => import("./chat/ChatBotButton"));
+// const ChatBotContainer = lazy(() => import("./chat/ChatBotContainer"));
 
 // Admin Routes Importing
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
@@ -69,6 +73,10 @@ const App = () => {
   ) : (
     <Router>
       <Header user={user} />
+
+      {/* <Suspense fallback={<LoaderLayout />}>
+        <ChatBot />
+      </Suspense> */}
 
       <Suspense fallback={<LoaderLayout />}>
         <Routes>
@@ -138,8 +146,10 @@ const App = () => {
           </Route>
 
           <Route path="*" element={<NotFound />} />
+          {/* <Route path="/chatbot" element={<ChatBot />} /> */}
         </Routes>
       </Suspense>
+      <ChatBotContainer />
 
       <Toaster position="bottom-center" />
     </Router>

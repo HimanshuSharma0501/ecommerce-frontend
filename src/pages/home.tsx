@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import { Slider } from "6pp";
 import { TbTruckDelivery } from "react-icons/tb";
 import { LuShieldCheck } from "react-icons/lu";
+import ChatBot from "../chat/ChatBot";
 
 const clients = [
   {
@@ -206,6 +207,8 @@ const Home = () => {
           )}
         </main>
       </div>
+
+      <ChatBot />
 
       <article className="cover-video-container">
         <div className="cover-video-overlay"></div>
