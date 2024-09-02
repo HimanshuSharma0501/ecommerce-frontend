@@ -24,7 +24,7 @@ const ChatBotContainer = () => {
           className={`chat-bot-button ${isChatOpen ? "open" : ""}`}
           onClick={toggleChat}
         >
-          <AiOutlineMessage /> {/* Using a React icon instead of an image */}
+          <AiOutlineMessage />
         </button>
       )}
     </div>

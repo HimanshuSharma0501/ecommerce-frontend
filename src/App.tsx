@@ -146,7 +146,6 @@ const App = () => {
           </Route>
 
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="/chatbot" element={<ChatBot />} /> */}
         </Routes>
       </Suspense>
       <ChatBotContainer />
