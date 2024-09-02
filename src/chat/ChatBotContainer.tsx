@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ChatBot from "./ChatBot";
 import "../styles/chatbotcontainer.scss";
 import { AiOutlineClose, AiOutlineMessage } from "react-icons/ai";
