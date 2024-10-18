@@ -11,7 +11,7 @@ import { userExist, userNotExist } from "./redux/reducer/userReducer";
 import { RootState } from "./redux/store";
 
 import { onAuthStateChanged } from "firebase/auth";
-import ChatBotContainer from "./chat/ChatBotContainer";
+// import ChatBotContainer from "./chat/ChatBotContainer";
 
 const Home = lazy(() => import("./pages/home"));
 const Search = lazy(() => import("./pages/search"));
