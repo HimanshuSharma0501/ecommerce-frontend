@@ -148,7 +148,7 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
-      <ChatBotContainer />
+      {/*<ChatBotContainer />*/}
 
       <Toaster position="bottom-center" />
     </Router>
